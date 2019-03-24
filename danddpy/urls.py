@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+import kharid_konid.views
 from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home , name='home'),
-    path('kharid/', views.kharid , name = 'kharid'),
-    path('darbare/', views.dar, name='darbare')
+    path('kharid/', kharid_konid.views.kharid , name = 'kharid'),
+    path('darbare/', views.dar, name='darbare'),
+    path('akhbar/', views.akhbar, name="akhbar")
 ]

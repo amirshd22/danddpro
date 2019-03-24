@@ -118,6 +118,7 @@ body{
     display: inline-block;
     list-style: none;
     padding: 15px;
+    float:right;
 }
 .navbar .nav-content a{
     font-size: 1.5rem;
@@ -128,10 +129,7 @@ body{
     text-decoration: none;
 }
 .navbar .nav-content a:hover{
-    color: white;
-    font-size: 1.7rem;
-    transition: 0.5s;
-    font-weight: 500;
+    text-decoration: underline;
 }
 
 .main-body-header{
@@ -147,6 +145,7 @@ body{
     flex: 2;
 }
 .main-body-header .logo img{
+    margin-top: 10px;
     margin-left: 50px;
     border-radius: 100px;
 
@@ -247,19 +246,28 @@ body{
 }
 
 .links {
-    background: #333;
+    background:whitesmoke ;
     margin-top: 50px;
     flex: 2;
 
 }
 .links h3{
     padding: 5px;
-    color: white;
+    color: #444;
     font-weight: 400;
-    font-size: 1.1rem;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
 
 }
 
+.links p{
+    padding: 5px;
+    color: #444;
+    font-weight: 400;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
 
 
 @media(max-width:768px){
@@ -315,14 +323,14 @@ body{
                         <li><a href="#" class="btn-close" onclick="closesilde()">&times;</a></li>
                         <li><a href="/">خانه</a></li>
                         <li><a href="/kharid">خرید کنید </a></li>
-                        <li><a href="#">اخبار روزانه</a></li>
+                        <li><a href="/akhbar">اخبار روزانه</a></li>
                     </ul>
                 </div>
                 <div class="nav-content">
                     <ul>
-                        <li><a href="/">خانه</a></li>                        <li><a href="/kharid">خرید کنید</a></li>
-                        <li><a href="/darbare">درباره</a></li>
-                        <li><a href="#">اخبار روزانه</a></li>
+                        <li><a href="/">خانه</a></li>                        
+                        <li><a href="/kharid">خرید کنید</a></li>
+                        <li><a href="/akhbar">اخبار روزانه</a></li>
                     </ul>
                 </div>
             </nav>
@@ -363,8 +371,9 @@ body{
         </div>
         <div class="main-footer">
             <div class="links" id="primary">
-                <h3>شماره تماس:09906873238</h3>
-                <h3>شماره تماس :09213386874</h3>
+                <p> kharid konid is &copy; dandd</p>
+                <p>welcome to dandd this is a iranian website made by amirhossein delkhosh and farzan dadpajouh, this is a game center with news and security options so hope you enjoy using it</p>
+
             </div>
             <div class="links" id="secondary">
                 <h3>instagram:@dandd</h3>

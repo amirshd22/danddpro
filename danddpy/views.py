@@ -11,3 +11,7 @@ def kharid(request):
 
 def dar(request):
     return render(request, 'htcss/darbare.html')
+
+
+def akhbar(request):
+    return render(request, 'htcss/akhbar.html')
