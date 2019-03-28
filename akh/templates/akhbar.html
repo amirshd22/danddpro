@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>اخبار دی اند دی</title>
+</head>
+<body>
+    <header>
+        <div style=" background: #741d51; /* Old browsers */
+        background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" class="collapse bg-dark" id="navbarHeader">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-9 col-md-7 py-1">
+                <h4 class="text-white">اخبار روزانه</h4>
+                <p class="text-white">اخبار روزانه گیم فیلم و موزیک در دی اند با ما باشید تا تمام اخبار روز را در اختیارتان بگذاریم</p>
+              </div>
+              <div class="col-sm-4 offset-md-1 py-4">
+                <h4 class="text-white ">Menu</h4>
+                <ul class="list-unstyled">
+                  <li><a href="{% url 'home' %}" class="text-white  ">خانه</a></li>
+                  <li><a href="{% url 'kharid' %}" class="text-white ">خرید کنید</a></li>
+                  <li><a href="{% url 'akhbar' %}" class="text-white ">اخبار روزانه</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style=" background: #741d51; /* Old browsers */
+        background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" class="navbar navbar-dark bg-dark shadow-sm">
+          <div class="container d-flex justify-content-between">
+            <a href="#" class="navbar-brand d-flex align-items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+              <strong>اخبار روزانه</strong>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+        </div>
+    </header>
+    <div class="jumbotron ">
+        <h1 class="display-4">خوش آمدید</h1>
+        <p class="lead">اخبار روزانه با دی اند دی تمام اخبار گیم فیلم فوتبال و موزیک را با ما داشته باشید </p>
+        <hr class="my-4">
+        <p>با ما باشید تا به راحتی تمامی اخبار روزانه را داشته باشید</p>
+        <a class="btn btn-primary btn-lg" href="{% url 'home' %}" style="background: #741d51; /* Old browsers */
+        background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to left, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */ ; border:#e44e52" class="navbar navbar-dark bg-dark shadow-sm" role="button">D.AND.D</a>
+      </div>
+   
+      </div>
+      {% for jobs in akhbar.all %}
+      <div class="col-md-6" style="display:inline" >
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">{{ jobs.title }}</strong>
+            <div class="mb-1 text-muted">{{ jobs.time }}</div>
+            <p class="card-text mb-auto">{{ jobs.text }}</p>
+            <a href="#" class="stretched-link">Continue reading</a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img class="bd-placeholder-img" src="{{ jobs.img.url }}" width="250px" height="160px" alt="">
+        </div>
+        </div>
+        {% endfor %}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>

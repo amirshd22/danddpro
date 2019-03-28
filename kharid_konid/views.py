@@ -4,4 +4,4 @@ from .models import Kharid
 
 def kharid(request):
     deli = Kharid.objects
-    return render(request, 'DD/kharid.html', {'game': deli })
+    return render(request, 'kharid.html', {'game': deli })

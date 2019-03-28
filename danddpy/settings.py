@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'akh.apps.AkhConfig',
     'kharid_konid.apps.KharidKonidConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -127,5 +128,6 @@ STATIC_DIR = 'static'
 STATICFILES_DIRS = [
     STATIC_DIR, 
 ]
+
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDAI_URL= '/media/'
+MEDIA_URL = '/media/'

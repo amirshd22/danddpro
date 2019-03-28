@@ -246,7 +246,7 @@ body{
 }
 
 .links {
-    background:whitesmoke ;
+    background:white ;
     margin-top: 50px;
     flex: 2;
 
@@ -328,9 +328,9 @@ body{
                 </div>
                 <div class="nav-content">
                     <ul>
-                        <li><a href="/">خانه</a></li>                        
-                        <li><a href="/kharid">خرید کنید</a></li>
-                        <li><a href="/akhbar">اخبار روزانه</a></li>
+                        <li><a href="{% url 'home' %}">خانه</a></li>                        
+                        <li><a href="{% url 'kharid' %}">خرید کنید</a></li>
+                        <li><a href="{% url 'akhbar' %}">اخبار روزانه</a></li>
                     </ul>
                 </div>
             </nav>
@@ -366,7 +366,7 @@ body{
             </div>
             <div class="container sec">
                     <img src="{% static 'htcss/img/dollar.png' %}" alt=""><br>
-                    <h4>خرید راحت</h4>
+                    <h4>خرید کنید</h4>
             </div>
         </div>
         <div class="main-footer">
