@@ -8,6 +8,8 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
     <title>خرید کنید دی اند دی</title>
+    <link rel="icon" href="../static/htcss/img/logo.jpg">
+
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Bootstrap core CSS -->
@@ -92,7 +94,7 @@
           {% for job in game.all %}
         <div class="col-md-4">
           <div class="card mb-4 shadow-sm">
-            <img src="{{ job.img.url }}" class="card-img-top" id="images" alt="PHOTO">
+            <img src="{{ job.img.url }}" width="250px" height="250px" class="card-img-top" id="images" alt="PHOTO">
             <div class="card-body">
               <p class="card-text">{{ job.text }}</p>
               <h6>{{ job.price }}</h6>

@@ -1,0 +1,86 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>{{ dtails.title }}</title>
+    <style>
+        .main{
+            max-width: 100%;
+
+        }
+        
+    
+    </style>
+</head>
+<body>
+        <header>
+                <div style=" background: #741d51; /* Old browsers */
+                background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to left, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" class="collapse bg-dark" id="navbarHeader">
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-sm-9 col-md-7 py-1">
+                        <h4 class="text-white">اخبار روزانه</h4>
+                        <p class="text-white">اخبار روزانه گیم فیلم و موزیک در دی اند با ما باشید تا تمام اخبار روز را در اختیارتان بگذاریم</p>
+                      </div>
+                      <div class="col-sm-4 offset-md-1 py-4">
+                        <h4 class="text-white ">Menu</h4>
+                        <ul class="list-unstyled">
+                          <li><a href="{% url 'home' %}" class="text-white  ">خانه</a></li>
+                          <li><a href="{% url 'kharid' %}" class="text-white ">خرید کنید</a></li>
+                          <li><a href="{% url 'akhbar' %}" class="text-white ">اخبار روزانه</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div style=" background: #741d51; /* Old browsers */
+                background: -moz-linear-gradient(right, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(right, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to left, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */" class="navbar navbar-dark bg-dark shadow-sm">
+                  <div class="container d-flex justify-content-between">
+                    <a href="#" class="navbar-brand d-flex align-items-center">
+                      <strong>{{ dtails.title }}</strong>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                  </div>
+                </div>
+    <div class="main">
+        <div class="row">
+            
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <img src="{{ dtails.img.url }}" width="250px" height="250px" class="card-img-top" id="images" alt="PHOTO">
+              <div class="card-body bg-dark">
+                <p class="card-text text-white">{{ dtails.text }}</p>
+                <strong class="card-text text-white">{{ dtails.time }}</strong>
+                <button type="button" href="{% url 'akhbar' %}" class="btn btn-outline-danger">back to akhbar</button>
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="btn-group">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+          </div>
+          
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
+</body>
+</html>
